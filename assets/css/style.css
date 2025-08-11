@@ -1,0 +1,52 @@
+/* style.css */
+
+/* Custom CSS for the body font and background color */
+body {
+    font-family: 'Montserrat', sans-serif; /* Sets the primary font to Montserrat */
+    background-color: #012B01; /* Darker Forest Green background */
+    color: #FDF5E6; /* Cream text color */
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Headings also use Montserrat for consistency */
+}
+
+.dancing-script {
+    font-family: 'Dancing Script', cursive; /* Specific class for the script font */
+}
+
+/* Define custom Tailwind colors */
+.bg-dark-green {
+    background-color: #023D02; /* Slightly lighter dark forest green for cards */
+}
+
+.text-cream {
+    color: #FDF5E6; /* Cream text color */
+}
+
+.border-dark-green-accent {
+    border-color: #2E8B57; /* A vibrant forest green for accents/borders */
+}
+
+/* Basic hover transition for elements, can be expanded for more complex animations */
+.transition-all {
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease-in-out */
+}
+
+/* Example of a more advanced element: a subtle pulse animation for the logo */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* stronger shadow */
+    }
+}
+
+.logo-pulse:hover {
+    animation: pulse 1s infinite;
+}
