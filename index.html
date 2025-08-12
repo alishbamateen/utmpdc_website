@@ -217,7 +217,7 @@
                 <h2 class="text-3xl font-bold text-dark-green-text mb-6 text-center">Contact Us</h2>
 
                 <div class="mb-6 text-center">
-                    <p class="text-xl mb-2"><span class="text-dark-green-text">Email:</span> <a href="mailto:utmpdc@example.com" class="text-dark-green-text underline hover:opacity-80">utmpdc@example.com</a></p>
+                    <p class="text-xl mb-2"><span class="text-dark-green-text">Email:</span> <a href="mailto:pdc.uoft@gmail.com" class="text-dark-green-text underline hover:opacity-80">pdc.uoft@gmail.com</a></p>
                     <p class="text-xl mb-4"><span class="text-dark-green-text">Instagram:</span> <a href="https://www.instagram.com/utm_pdc" target="_blank" rel="noopener noreferrer" class="text-dark-green-text underline hover:opacity-80">@utm_pdc</a></p>
                 </div>
 
@@ -241,7 +241,7 @@
                                   placeholder="Type your message here..."></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="inline-block bg-dark-green-text hover:opacity-80 text-dark-green-text font-bold py-3 px-8 rounded-full shadow-xl
+                        <button type="submit" onclick="sendMail()"class="inline-block bg-dark-green-text hover:opacity-80 text-dark-green-text font-bold py-3 px-8 rounded-full shadow-xl
                                                      transform transition duration-300 hover:scale-110 hover:shadow-2xl border-2 border-dark-green-accent">
                             Send Message
                         </button>
@@ -252,21 +252,20 @@
         
         <footer class="w-full max-w-6xl text-center text-dark-green-text text-sm mt-10 p-4 bg-cream-card rounded-xl shadow-2xl
                        transform transition-all duration-300 ease-in-out">
-            <p>&copy; 2025 UTM Pakistani Drama Club. All rights reserved.</p>
+            <p>&copy; 2025 UTM Pakistani Drama Club.</p>
         </footer>
     </div>
-
-    <script>
-        // Handle form submission (client-side only, no backend)
-        const contactForm = document.querySelector('#contact-page form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Prevent default form submission
-                // In a real application, you would send this data to a server
-                alert('Message sent! (This is a demo, no actual email was sent.)');
-                contactForm.reset(); // Clear the form
-            });
-        }
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "vVdwDRxi0-5N-g-ZJ",
+        });
+    })();
+    </script>
+    <script src = "script.js"></script>
+
 </body>
 </html>
